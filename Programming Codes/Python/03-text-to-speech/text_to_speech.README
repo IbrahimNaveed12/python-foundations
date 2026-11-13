@@ -1,71 +1,65 @@
 # Text-to-Speech: Twinkle Twinkle
 
-## Purpose
+## Problem Title & Summary
+Speak the "Twinkle, Twinkle, Little Star" poem using a local text-to-speech
+engine.
 
-This program sends the poem "Twinkle, Twinkle, Little Star" to a local
-text-to-speech engine. It demonstrates importing a third-party package,
-creating a speech engine, queueing text for speech, and waiting for playback
-to finish.
+## Logic & Approach
+The program imports `pyttsx3` and initializes its default speech engine. It
+adds the poem text to the engine's queue with `engine.say(...)`, then calls
+`engine.runAndWait()` to play the queued speech and wait for playback to
+finish.
 
 ## Requirements
-
 - Python 3
 - The `pyttsx3` package
-- A supported speech engine installed on the operating system
+- A supported speech engine and voice installed on the operating system
 
-Install the Python dependency with:
-
+Install the package with:
 ```text
 python -m pip install pyttsx3
 ```
 
-On Windows, `pyttsx3` normally uses the system's SAPI5 speech voices. Other
-operating systems use their supported speech engines; install/configure one if
-the system does not already provide it.
+On Windows, `pyttsx3` normally uses SAPI5 voices. Other operating systems use
+their supported speech engines.
+
+## Time & Space Complexity
+For poem text containing n characters, preparing and queueing the text takes
+O(n) time and O(n) space. Speech playback time depends on the selected voice
+and speaking rate.
+
+## Example Input & Output
+```text
+Input: None
+
+Output: The speech engine reads the poem aloud.
+```
 
 ## Run
-
-From this folder, run:
-
+Run with Python 3:
 ```text
 python text_to_speech.py
 ```
 
-The program speaks the poem. It does not print the poem to the terminal.
-Execution waits until the speech queue has finished playing.
-
-## How it works
-
-1. Import `pyttsx3`.
-2. Initialize the default speech engine with `pyttsx3.init()`.
-3. Add the poem to the engine's speech queue using `engine.say(...)`.
-4. Call `engine.runAndWait()` to process the queue and wait for playback to
-   complete.
-
-## Flow diagram
-
+## Flow Diagram
 ```text
 Start
   |
   v
-Import pyttsx3
-  |
-  v
-Initialize local speech engine
+Initialize speech engine
   |
   v
 Queue poem text
   |
   v
-Speak queued text and wait
+Speak text and wait for playback
   |
   v
 End
 ```
 
 ## Troubleshooting
-
-- If Python reports `No module named 'pyttsx3'`, install the dependency using
-  the command above, using the same Python interpreter that runs the script.
-- If initialization or playback fails, check that the operating system has a
-  supported speech engine and at least one usable voice installed.
+- If Python reports `No module named 'pyttsx3'`, install the package using the
+  command above with the same Python interpreter used to run the script.
+- If initialization or playback fails, check that a supported speech engine
+  and at least one usable voice are installed.
