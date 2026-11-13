@@ -1,0 +1,46 @@
+# Hello World
+
+## Purpose
+
+This is the smallest program in the collection. It writes the text `Hello
+World!` to the terminal, demonstrating how to run a Python file and display
+text with the built-in `print` function.
+
+## Requirements
+
+- Python 3
+- No third-party packages
+
+## Run
+
+From this folder, run:
+
+```text
+python hello_world.py
+```
+
+Expected output:
+
+```text
+Hello World!
+```
+
+## How it works
+
+`print` receives one string and writes it to standard output, followed by a
+newline. Python executes this statement when the script is run.
+
+## Flow diagram
+
+```text
+Start
+  |
+  v
+Call print("Hello World!")
+  |
+  v
+Write greeting to terminal
+  |
+  v
+End
+```

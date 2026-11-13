@@ -1,0 +1,46 @@
+# Twinkle Twinkle Poem
+
+## Purpose
+
+This program prints the complete poem stored in a triple-quoted string. It
+demonstrates multiline string literals, line breaks, blank lines, and sending
+text to the terminal with `print`.
+
+## Requirements
+
+- Python 3
+- No third-party packages
+
+## Run
+
+From this folder, run:
+
+```text
+python twinkle_poem.py
+```
+
+The poem is printed with its original line and stanza breaks.
+
+## How it works
+
+The `""" ... """` delimiters let the poem span multiple source-code lines.
+Python retains those line breaks in the string. The call to `print` writes the
+result to standard output.
+
+## Flow diagram
+
+```text
+Start
+  |
+  v
+Create multiline poem string
+  |
+  v
+Pass string to print
+  |
+  v
+Display poem in terminal
+  |
+  v
+End
+```
